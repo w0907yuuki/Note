@@ -1,0 +1,15 @@
+# Eclipse
+bin/
+.settings/
+.project
+.classpath
+
+# Java
+*.class
+
+# SQLite
+data/notes.db
+
+# OS
+.DS_Store
+Thumbs.db
