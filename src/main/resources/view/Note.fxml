@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NoteController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView fx:id="treeView" prefHeight="400.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding></TreeView>
+            <Button mnemonicParsing="false" onAction="#onAdd" text="追加">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Button>
+            <ToggleButton fx:id="sortModeButton" mnemonicParsing="false" text="並び替えモード">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin></ToggleButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="232.0" prefWidth="250.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="タイトル">
+               <padding>
+                  <Insets top="10.0" />
+               </padding></Label>
+            <TextField fx:id="titleField" />
+            <Label text="メモ" />
+            <TextArea fx:id="memoArea" prefHeight="200.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onSave" text="保存">
+                     <opaqueInsets>
+                        <Insets right="20.0" />
+                     </opaqueInsets></Button>
+                  <Button mnemonicParsing="false" onAction="#onDelete" text="削除">
+                     <opaqueInsets>
+                        <Insets top="20.0" />
+                     </opaqueInsets></Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets left="10.0" />
+         </opaqueInsets>
+      </VBox>
+   </center>
+</BorderPane>
